@@ -15,4 +15,9 @@ export default function ({
   const locale = params.lang || 'cn';
   store.commit('SET_LANG', locale); // set store
   app.i18n.locale = store.state.locale;
-}
+} 
+// export default function (ctx,next) {
+//   console.log('middleware data = ', ctx) 
+//   console.log('middleware next = ', next) 
+//   console.log('middleware arguments = ', arguments) 
+// }
