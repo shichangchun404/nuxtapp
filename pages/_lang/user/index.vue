@@ -8,7 +8,6 @@
 <script>
 import userList from '~/components/userList.vue'
 export default {
-  layout: 'userList',
   components: {
     userList
   }

@@ -34,7 +34,8 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/element-ui'
+    '@/plugins/element-ui',
+    '@/plugins/i18n'
   ],
   /*
   ** Nuxt.js modules
@@ -46,13 +47,18 @@ module.exports = {
   */
   build: {
     transpile: [/^element-ui/],
+    vendor: ['vue-i18n'], // webpack vue-i18n.bundle.js
     /*
     ** You can extend webpack config here
     */
     extend(config, ctx) {
     }
   },
+  generate: {
+    routes: ['/', '/index', '/cn', '/en/']
+  },
   router: {
+    middleware: 'i18n' // middleware all pages of the application
     // extendRoutes(routes, resolve) {
     //   console.log('routes', routes)
     //   let index = routes.findIndex(it => it.name === 'top')

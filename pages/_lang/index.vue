@@ -1,6 +1,5 @@
 <template>
   <div>
-    <nuxt />
+    <p>{{$t('common.lang')}}</p>
   </div>
 </template>
-
